@@ -11,7 +11,7 @@ package blagajna;
 public class Racun {
     public Artikal[] artikli;
     
-    public void Add(Artikal artikal) throws NullPointerException{
+    public void DodajArtikal(Artikal artikal) throws NullPointerException{
         if(artikal == null){
             throw new NullPointerException("Argument \"Artikli artikal\" can not be null.");
         }
@@ -30,11 +30,11 @@ public class Racun {
         }
         artikli[buffer.length] = artikal;
     }
-    public void Remove(Artikal artikal){
+    public void UkloniArtikal(Artikal artikal){
         
     }
     
-    public float CalculateTotal(){
+    public float IzracunajUkupnuCijenu(){
         if(artikli == null){
             return 0.0f;
         }
