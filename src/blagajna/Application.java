@@ -20,12 +20,14 @@ public class Application {
      */
     public static void main(String[] args) {
         db_Manager = new database.DatabaseManager("jdbc:mysql://193.198.97.7", "ndjedovic", "11");
-        db_Manager.Connect();
         u_Current = null;
         
         ui_Manager = new gui.UIManager();
+        
         user_Manager = new administration.UserManager();
         user_Manager.db_Manager = db_Manager;
+        
+        Blagajna.db_Manager = db_Manager;
         
         user_Manager.LoginUser(null);
         
