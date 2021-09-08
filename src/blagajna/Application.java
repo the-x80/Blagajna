@@ -15,6 +15,9 @@ public class Application {
     public static administration.User u_Current;
     
     public static gui.UIManager ui_Manager;
+    
+    public static Thread t_UserInterface;
+    public static Thread t_Database;
     /**
      * @param args the command line arguments
      */
@@ -28,8 +31,6 @@ public class Application {
         user_Manager.db_Manager = db_Manager;
         
         Blagajna.db_Manager = db_Manager;
-        
-        user_Manager.LoginUser(null);
         
         while(ui_Manager.w_Main.isShowing()){
             
